@@ -1,38 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 110vh;
+  color: white;
+  background-color: #020230;
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url("./images/kbc.jpg") center;
+  background-size: cover;
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.quest {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 1px solid white;
+  border-radius: 65px;
+  font-weight: 300px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+  background: mediumblue;
+}
+
+.money {
+  width: 30%;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.moneyList li {
+  font-size: 18px;
+}
+
+.item.active {
+  background-color: teal;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  /* display: inline-block; */
+  align-items: center;
+  /* padding: 5px; */
+  border-radius: 5px;
+  width: auto;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: #33d40f;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: red;
+  }
+}
+
+
+.timer{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.form-control{
+  padding: 10px;
+  /* width: 200px; */
+  font-size: 17px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.startBtn{
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #100241;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
 }
 
-.App-link {
-  color: #61dafb;
+.startBtn:hover{
+  background-color: #010191;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.earn{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  background-color: #020230;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #d8aafd, 0 0 40px #da83eb, 0 0 80px #f704f7;
+}
+
+.quit{
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.quitBtn{
+  padding: 5px 10px;
+  background-color: white;
+  color: #7a7979;
+  border-radius: 2px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.exitBtn{
+  padding: 7px 10px;
+  background-color: rgb(0, 136, 255);
+  color: white;
+  border-radius: 2px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.quit span{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  margin: 0 20px;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(164, 164, 164);
+}
+
+
+hr{
+  width: 304px;
+  height: .5px;
+  background-color: white;
+}
+
+
+.container-start{
+  background: url("./images/kbc.jpg") center;
+
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.zIndex{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.zIndex img{
+  width: 290px;
+  border-radius: 50%;
+}
+
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img{
+  position: absolute;
+  top: 20px;
+  width: 300px;
 }
