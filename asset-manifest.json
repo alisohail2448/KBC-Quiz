@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/KBC-Quiz/static/css/main.59f87b3a.css",
+    "main.js": "/KBC-Quiz/static/js/main.19dc48de.js",
+    "static/js/845.0a4aef13.chunk.js": "/KBC-Quiz/static/js/845.0a4aef13.chunk.js",
+    "static/media/kbc.jpg": "/KBC-Quiz/static/media/kbc.d90810befe317d645906.jpg",
+    "static/media/kbc logo.png": "/KBC-Quiz/static/media/kbc logo.5d5c95362ae3dd9f21c9.png",
+    "static/media/play.mp3": "/KBC-Quiz/static/media/play.8e5f6d1d81d4e1414b95.mp3",
+    "static/media/correct.mp3": "/KBC-Quiz/static/media/correct.160572d72c858155072e.mp3",
+    "static/media/wrong.mp3": "/KBC-Quiz/static/media/wrong.e946821894ae9b0a0d6f.mp3",
+    "index.html": "/KBC-Quiz/index.html",
+    "main.59f87b3a.css.map": "/KBC-Quiz/static/css/main.59f87b3a.css.map",
+    "main.19dc48de.js.map": "/KBC-Quiz/static/js/main.19dc48de.js.map",
+    "845.0a4aef13.chunk.js.map": "/KBC-Quiz/static/js/845.0a4aef13.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59f87b3a.css",
+    "static/js/main.19dc48de.js"
+  ]
+}
